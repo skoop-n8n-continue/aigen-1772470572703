@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #10181f; /* Dark background */
+    color: #ffffff;
+    overflow: hidden; /* No scrolling for signage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+.greeting {
+    font-size: 8vw; /* Responsive size */
+    font-weight: bold;
+    color: #00b7af; /* Primary teal */
+    text-shadow: 0 0 20px rgba(0, 183, 175, 0.5);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 3vw;
+    color: #6a7071; /* Secondary gray */
+    font-weight: 300;
+}
+
+/* Subtle floating animation to prevent screen burn-in and add life */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
